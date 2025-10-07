@@ -1,12 +1,14 @@
 # 🌿 SmartGardener: AI-Powered Garden Maintenance Assistant
 
-**SmartGardener** is an AI-driven garden maintenance application built with **Azure AI, Python, and React**. It helps gardeners, landscapers, and home plant enthusiasts monitor and maintain healthy gardens using **computer vision, natural language AI, and cloud automation**.  
+**SmartGardener** is an AI-driven garden maintenance application built with **Azure AI, TypeScript, Node.js, Python, and React**. It helps gardeners, landscapers, and home plant enthusiasts monitor and maintain healthy gardens using **computer vision, natural language AI, and cloud automation**.  
 
 Users can upload images, describe issues via text or voice, and receive intelligent recommendations to improve plant health, optimise watering schedules, and manage their garden efficiently.
 
 ---
 
 ## 🌱 Key Features
+
+*All features marked `[Pending]` are planned or in development.*
 
 - **AI Plant Health Diagnosis** – Identify diseases, pests, and nutrient deficiencies. `[Pending]`
 - **Plant Identification** – Automatically detect plant species from images. `[Pending]`
@@ -33,8 +35,8 @@ Users can upload images, describe issues via text or voice, and receive intellig
 
 | Layer | Tools & Services |
 |-------|-----------------|
-| **Frontend** | React + TypeScript + CIAM SDK for authentication |
-| **Backend** | Express.js API Gateway + Python (FastAPI AI Microservice) |
+| **Frontend** | React + TypeScript + CIAM SDK (Auth0 or Azure B2C) |
+| **Backend** | Express.js + TypeScript API Gateway + Python (FastAPI AI Microservice) |
 | **AI Services** | Azure OpenAI, Computer Vision, Speech, Custom ML Models |
 | **Data & Storage** | Azure SQL, Blob Storage, Data Lake |
 | **Infrastructure** | Terraform, Azure App Service, Azure DevOps Pipelines |
@@ -48,7 +50,7 @@ Users can upload images, describe issues via text or voice, and receive intellig
 ## 🌤️ Example User Flow
 
 1. User signs in via **CIAM** (email/password, social login, or external identity). `[Pending]`
-2. Uploads an image or speaks about a garden issue.  
+2. Uploads an image or speaks about a garden issue.
 3. AI identifies plants, flowers, fruits, weeds, or lawn types and diagnoses health issues. `[Pending]`
 4. AI provides daily actions and weekly tips based on weather and garden conditions. `[Pending]`
 5. User receives notifications and can view progress on the **Power BI dashboard**. `[Pending]`
@@ -56,22 +58,73 @@ Users can upload images, describe issues via text or voice, and receive intellig
 
 ---
 
-## 🧠 Hands-On Learning Coverage
-
-- **AI & ML**: Vision, OpenAI, ML models, species and disease detection  
-- **Cloud Integration**: Azure App Service, SQL, Blob, Key Vault  
-- **Full-Stack Development**: React frontend, Express.js API Gateway, Python microservice  
-- **DevOps & CI/CD**: Terraform, Azure DevOps pipelines, containerisation with Docker  
-- **Responsible AI**: Content Safety, evaluation, and guardrails  
-- **Observability**: App Insights, Log Analytics, dashboards  
-- **Automation**: Logic Apps, notifications, weather-based scheduling  
-- **CIAM**: Customer identity management, social login, self-service registration `[Pending]`
-
----
-
-> All features marked `[Pending]` are planned or in development. Remove the tag once implemented.
-
----
-
 ## 📂 Folder Structure
 
+```
+smart-gardener/
+├─ backend/
+│  ├─ src/
+│  │  ├─ server.ts           # main backend entry point
+│  │  ├─ routes/             # API routes (plants, auth, etc.)
+│  │  ├─ controllers/        # route controllers
+│  │  ├─ models/             # DB models or interfaces
+│  │  └─ db.ts               # database connection
+│  ├─ dist/                   # compiled JavaScript output
+│  ├─ package.json
+│  ├─ tsconfig.json
+│  └─ .env                    # environment variables (not committed)
+├─ frontend/
+│  ├─ src/
+│  │  ├─ App.tsx
+│  │  ├─ components/         # React components
+│  │  ├─ pages/              # page views
+│  │  ├─ services/           # API calls to backend
+│  │  └─ hooks/              # custom React hooks
+│  ├─ public/                 # static assets
+│  ├─ package.json
+│  ├─ tsconfig.json
+│  └─ .env                    # frontend environment variables
+├─ README.md
+└─ .gitignore
+```
+
+---
+
+## Set Up
+
+#### Create `.env` file:
+```
+PORT=5000
+DB_HOST=localhost
+DB_USER=postgres
+DB_PASSWORD=yourpassword
+DB_NAME=smart_gardener
+JWT_SECRET=your_jwt_secret
+```
+
+
+## 🛠️ Development Commands
+
+### Backend (Node.js + TypeScript)
+
+| Command               | Description                                  |
+|-----------------------|----------------------------------------------|
+| `npm install`         | Install project dependencies                 |
+| `npm run dev`         | Start backend server with auto-reload        |
+| `npm run build`       | Compile TypeScript to JavaScript (`dist/`)  |
+| `npm run start`       | Start compiled backend server (production)  |
+| `npm run lint`        | Run ESLint on backend code                   |
+| `npm test`            | Run unit tests                               |
+
+### Frontend (React + TypeScript)
+
+| Command               | Description                                  |
+|-----------------------|----------------------------------------------|
+| `npm install`         | Install project dependencies                 |
+| `npm run dev`         | Start React dev server                        |
+| `npm run build`       | Build production-ready frontend               |
+| `npm run preview`     | Preview production build                      |
+| `npm run lint`        | Run ESLint on frontend code                   |
+| `npm test`            | Run unit tests                               |
+
+---
