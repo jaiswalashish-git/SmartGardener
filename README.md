@@ -1,45 +1,77 @@
 # 🌿 SmartGardener: AI-Powered Garden Maintenance Assistant
-SmartGardener is an AI-driven cloud application designed to help homeowners, landscapers, and urban gardeners maintain healthy, thriving gardens through intelligent insights and automation.
-Powered by Azure AI and cloud-native technologies, the app combines computer vision, natural language understanding, and machine learning to diagnose plant issues, recommend maintenance actions, and automate garden care schedules.
-Users can simply upload a plant photo, speak about a problem, or chat with an AI garden assistant to receive tailored advice — from identifying diseases and pests to predicting the next optimal watering date.
-# 🌱 Key Features
-* **AI Plant Health Diagnosis** – Upload a photo and let Azure Computer Vision and custom ML models detect plant diseases, pests, or deficiencies.
-* **Conversational Garden Assistant** – Ask natural questions like “Why are my rose leaves turning yellow?” — powered by Azure OpenAI and Semantic Kernel.
-* **Voice-Based Interaction** – Describe garden issues or receive spoken tips through Azure Speech Services.
-* **Smart Watering Scheduler** – Predict watering needs using an ML model trained on weather, soil type, and past activity.
-* **Seasonal Maintenance Planner** – Logic App integration sends reminders for pruning, fertilising, or harvesting.
-* **Garden Analytics Dashboard** – View plant health trends, AI accuracy, and maintenance cost insights in Power BI.
-* **Responsible AI & Content Safety** – All AI responses are filtered and evaluated using Azure Content Safety and AI Studio Evaluation.
-* **End-to-End Observability** – Integrated Application Insights, Log Analytics, and custom Power BI reports for transparency and performance tracking.
-# 🧱 Technology Stack
-Layer	| Tools & Services
---- | ---
-Frontend | React + TypeScript + MSAL.js (Azure AD Auth)
-Backend | Express.js API Gateway + Python (FastAPI ML Service)
-AI Services | Azure OpenAI, Computer Vision, Speech, ML Workspace
-Data & Storage | Azure SQL, Blob Storage, Data Lake
-Infrastructure | Terraform, Azure App Service, Azure DevOps
-Security | Azure AD, Key Vault, Managed Identity
-Observability | Azure Monitor, App Insights, Log Analytics
-Responsible AI | Azure Content Safety + AI Studio Evaluation
-Analytics | Power BI Embedded
-# 🌤️ Example User Flow
-User signs in via Microsoft Entra ID.
-Uploads an image or speaks to describe a garden issue.
-The app invokes Azure Computer Vision and OpenAI models to analyse and explain the problem.
-AI generates actionable insights (e.g., “This looks like fungal leaf spot. Try neem oil and reduce watering.”).
-Recommendations and reminders are stored in Azure SQL and scheduled using Logic Apps.
-The Power BI dashboard visualises garden health over time.
-# 🧠 What You’ll Learn (Hands-On Skills)
-Integrating multiple Azure AI services (Vision, OpenAI, Speech, ML) into a unified app
-Building secure, cloud-native web apps using React, Express, and Python
-Deploying with Terraform, Azure App Service, and DevOps pipelines
-Implementing observability and Responsible AI practices
-Designing AI orchestration workflows using Semantic Kernel and Logic Apps
-# 🪴 Why This Project Matters
-SmartGardener showcases the complete lifecycle of an intelligent Azure application — from design to deployment — covering modern engineering themes like:
-* AI + Cloud integration
-* Security and governance
-* Responsible AI implementation
-* Observability and continuous improvement
-* It’s an ideal portfolio or interview project for aspiring Microsoft Solution Engineers and AI Cloud Architects.
+
+**SmartGardener** is an AI-driven garden maintenance application built with **Azure AI, Python, and React**. It helps gardeners, landscapers, and home plant enthusiasts monitor and maintain healthy gardens using **computer vision, natural language AI, and cloud automation**.  
+
+Users can upload images, describe issues via text or voice, and receive intelligent recommendations to improve plant health, optimise watering schedules, and manage their garden efficiently.
+
+---
+
+## 🌱 Key Features
+
+- **AI Plant Health Diagnosis** – Identify diseases, pests, and nutrient deficiencies. `[Pending]`
+- **Plant Identification** – Automatically detect plant species from images. `[Pending]`
+- **Flower Identification** – Identify flowers in your garden. `[Pending]`
+- **Fruit Identification** – Detect fruits on trees or plants. `[Pending]`
+- **Weed Identification** – Detect unwanted plants (weeds) in the garden. `[Pending]`
+- **Weed Treatment Recommendations** – AI-generated suggestions for weed control. `[Pending]`
+- **Lawn Identification** – Recognize grass types and lawn health status. `[Pending]`
+- **Conversational Garden Assistant** – Chat with AI to get advice about your plants. `[Pending]`
+- **Voice-Based Interaction** – Use speech input/output for queries. `[Pending]`
+- **Smart Watering Scheduler** – ML-based recommendations for watering frequency. `[Pending]`
+- **Seasonal & Daily Action Planner** – Sends daily action notifications based on weather and your garden. `[Pending]`
+- **Weekly Gardening Tips** – Receive curated tips to improve harvest and garden health. `[Pending]`
+- **Garden Plan Creation** – AI generates a custom plan for your garden layout and maintenance. `[Pending]`
+- **Weather Data Integration** – Fetch weather for the user's location to personalise recommendations. `[Pending]`
+- **Analytics Dashboard** – Power BI Embedded dashboard showing garden health trends. `[Pending]`
+- **Responsible AI & Content Safety** – Filters AI responses and evaluates outputs. `[Pending]`
+- **Observability & Monitoring** – Tracks performance, logs, and errors using Azure Monitor and App Insights. `[Pending]`
+- **Customer Identity & Access Management (CIAM)** – Secure user registration, login, social logins, and profile management. `[Pending]`
+
+---
+
+## 🧱 Technology Stack
+
+| Layer | Tools & Services |
+|-------|-----------------|
+| **Frontend** | React + TypeScript + CIAM SDK for authentication |
+| **Backend** | Express.js API Gateway + Python (FastAPI AI Microservice) |
+| **AI Services** | Azure OpenAI, Computer Vision, Speech, Custom ML Models |
+| **Data & Storage** | Azure SQL, Blob Storage, Data Lake |
+| **Infrastructure** | Terraform, Azure App Service, Azure DevOps Pipelines |
+| **Security** | CIAM, Key Vault, Managed Identity |
+| **Observability** | Azure Monitor, App Insights, Log Analytics |
+| **Responsible AI** | Azure Content Safety + AI Studio Evaluation |
+| **Analytics** | Power BI Embedded |
+
+---
+
+## 🌤️ Example User Flow
+
+1. User signs in via **CIAM** (email/password, social login, or external identity). `[Pending]`
+2. Uploads an image or speaks about a garden issue.  
+3. AI identifies plants, flowers, fruits, weeds, or lawn types and diagnoses health issues. `[Pending]`
+4. AI provides daily actions and weekly tips based on weather and garden conditions. `[Pending]`
+5. User receives notifications and can view progress on the **Power BI dashboard**. `[Pending]`
+6. AI generates a customised garden plan for seasonal care. `[Pending]`
+
+---
+
+## 🧠 Hands-On Learning Coverage
+
+- **AI & ML**: Vision, OpenAI, ML models, species and disease detection  
+- **Cloud Integration**: Azure App Service, SQL, Blob, Key Vault  
+- **Full-Stack Development**: React frontend, Express.js API Gateway, Python microservice  
+- **DevOps & CI/CD**: Terraform, Azure DevOps pipelines, containerisation with Docker  
+- **Responsible AI**: Content Safety, evaluation, and guardrails  
+- **Observability**: App Insights, Log Analytics, dashboards  
+- **Automation**: Logic Apps, notifications, weather-based scheduling  
+- **CIAM**: Customer identity management, social login, self-service registration `[Pending]`
+
+---
+
+> All features marked `[Pending]` are planned or in development. Remove the tag once implemented.
+
+---
+
+## 📂 Folder Structure
+
